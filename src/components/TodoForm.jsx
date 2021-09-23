@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
+
 const TodoForm = ({ addTodo }) => {
   const [todo, setTodo] = useState({
     id: '',
@@ -26,7 +27,9 @@ const TodoForm = ({ addTodo }) => {
         onChange={handleChange}
         type="text"
       />
-      <button type="submit">Submit</button>
+      <button className="btn btn-primary" type="submit">
+        Submit
+      </button>
     </form>
   );
 };

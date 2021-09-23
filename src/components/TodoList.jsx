@@ -3,7 +3,7 @@ import Todo from './Todo';
 
 const TodoList = ({ todos, toggleTodo, removeTodo }) => {
   return (
-    <ul>
+    <ul className="list-group">
       {todos.map((todo) => (
         <Todo
           key={todo.id}

@@ -8,8 +8,8 @@ const Todo = ({ todo, toggleTodo, removeTodo }) => {
     removeTodo(todo.id);
   };
   return (
-    <div style={{ display: 'flex' }}>
-      <input type="checkbox" onClick={handleCheck} />
+    <li className="list-group-item w-25">
+      <input className="mr-5" type="checkbox" onClick={handleCheck} />
       <li
         style={{
           textDecoration: todo.completed ? 'line-through' : null,
@@ -17,8 +17,10 @@ const Todo = ({ todo, toggleTodo, removeTodo }) => {
       >
         {todo.task}
       </li>
-      <button onClick={handleDelete}>X</button>
-    </div>
+      <button className="btn btn-danger mt-2" onClick={handleDelete}>
+        X
+      </button>
+    </li>
   );
 };
 
